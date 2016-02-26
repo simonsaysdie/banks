@@ -18,12 +18,16 @@ defmodule Dinero.Router do
 
     get "/", PageController, :index
 
+  end
+
+  scope "/admin", Dinero do
+    pipe_through :browser # Use the default browser stack
+
     resources "/banks", BankController
     resources "/debits", DebitController
     resources "/credits", CreditController
 
   end
-
   # Other scopes may use custom stacks.
   # scope "/api", Dinero do
   #   pipe_through :api
