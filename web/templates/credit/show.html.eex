@@ -13,11 +13,6 @@
   </li>
 
   <li>
-    <strong>Opening:</strong>
-    <%= @credit.opening %>
-  </li>
-
-  <li>
     <strong>Min age:</strong>
     <%= @credit.min_age %>
   </li>
@@ -56,6 +51,12 @@
     <strong>Min income:</strong>
     <%= @credit.min_income %>
   </li>
+
+   <li>
+    <strong>bank id:</strong>
+    <%= @credit.bank_id %>
+  </li>
+
 
 </ul>
 

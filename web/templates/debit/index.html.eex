@@ -10,6 +10,8 @@
       <th>Min age</th>
       <th>Promo</th>
       <th>Insurance</th>
+      <th>bank id</th>
+
 
       <th></th>
     </tr>
@@ -24,6 +26,8 @@
       <td><%= debit.min_age %></td>
       <td><%= debit.promo %></td>
       <td><%= debit.insurance %></td>
+      <td><%= debit.bank_id %></td>
+
 
       <td class="text-right">
         <%= link "Show", to: debit_path(@conn, :show, debit), class: "btn btn-default btn-xs" %>

@@ -18,12 +18,6 @@
   </div>
 
   <div class="form-group">
-    <%= label f, :opening, class: "control-label" %>
-    <%= number_input f, :opening, class: "form-control" %>
-    <%= error_tag f, :opening %>
-  </div>
-
-  <div class="form-group">
     <%= label f, :min_age, class: "control-label" %>
     <%= number_input f, :min_age, class: "form-control" %>
     <%= error_tag f, :min_age %>
@@ -69,6 +63,13 @@
     <%= label f, :min_income, class: "control-label" %>
     <%= number_input f, :min_income, class: "form-control" %>
     <%= error_tag f, :min_income %>
+  </div>
+
+
+  <div class="form-group">
+    <%= label f, :bank_id, class: "control-label" %>
+    <%= number_input f, :bank_id, class: "form-control" %>
+    <%= error_tag f, :bank_id %>
   </div>
 
   <div class="form-group">

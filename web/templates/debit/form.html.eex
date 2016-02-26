@@ -48,6 +48,12 @@
   </div>
 
   <div class="form-group">
+    <%= label f, :bank_id, class: "control-label" %>
+    <%= number_input f, :bank_id, class: "form-control" %>
+    <%= error_tag f, :bank_id %>
+  </div>
+
+  <div class="form-group">
     <%= submit "Submit", class: "btn btn-primary" %>
   </div>
 <% end %>

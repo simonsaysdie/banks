@@ -37,6 +37,11 @@
     <%= @debit.insurance %>
   </li>
 
+  <li>
+    <strong>bank id:</strong>
+    <%= @debit.bank_id %>
+  </li>
+
 </ul>
 
 <%= link "Edit", to: debit_path(@conn, :edit, @debit) %>

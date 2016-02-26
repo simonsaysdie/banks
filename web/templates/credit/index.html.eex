@@ -5,7 +5,6 @@
     <tr>
       <th>Name</th>
       <th>Requirements</th>
-      <th>Opening</th>
       <th>Min age</th>
       <th>Max age</th>
       <th>Promo</th>
@@ -14,6 +13,7 @@
       <th>Annual</th>
       <th>Additional cards</th>
       <th>Min income</th>
+      <th>bank id</th>
 
       <th></th>
     </tr>
@@ -23,7 +23,6 @@
     <tr>
       <td><%= credit.name %></td>
       <td><%= credit.requirements %></td>
-      <td><%= credit.opening %></td>
       <td><%= credit.min_age %></td>
       <td><%= credit.max_age %></td>
       <td><%= credit.promo %></td>
@@ -32,6 +31,7 @@
       <td><%= credit.annual %></td>
       <td><%= credit.additional_cards %></td>
       <td><%= credit.min_income %></td>
+      <td><%= credit.bank_id %></td>
 
       <td class="text-right">
         <%= link "Show", to: credit_path(@conn, :show, credit), class: "btn btn-default btn-xs" %>

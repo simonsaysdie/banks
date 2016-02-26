@@ -2,6 +2,8 @@ defmodule Dinero.Bank do
   use Dinero.Web, :model
 
   schema "banks" do
+    has_many :credits, Dinero.Credit
+    has_many :debits, Dinero.Debit
     field :name, :string
     field :website, :string
 

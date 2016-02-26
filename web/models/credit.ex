@@ -2,9 +2,9 @@ defmodule Dinero.Credit do
   use Dinero.Web, :model
 
   schema "credits" do
+    belongs_to :bank, Dinero.Bank
     field :name, :string
     field :requirements, :string
-    field :opening, :integer
     field :min_age, :integer
     field :max_age, :integer
     field :promo, :boolean, default: false
@@ -17,7 +17,7 @@ defmodule Dinero.Credit do
     timestamps
   end
 
-  @required_fields ~w(name requirements opening min_age max_age promo insurance cat annual additional_cards min_income)
+  @required_fields ~w(name requirements min_age max_age promo insurance cat annual additional_cards min_income bank_id)
   @optional_fields ~w()
 
   @doc """
