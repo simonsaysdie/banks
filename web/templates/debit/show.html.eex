@@ -23,6 +23,11 @@
   </li>
 
   <li>
+    <strong>Min age:</strong>
+    <%= @debit.min_age %>
+  </li>
+
+  <li>
     <strong>Promo:</strong>
     <%= @debit.promo %>
   </li>

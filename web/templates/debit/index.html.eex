@@ -7,6 +7,7 @@
       <th>Requirements</th>
       <th>Opening</th>
       <th>Max age</th>
+      <th>Min age</th>
       <th>Promo</th>
       <th>Insurance</th>
 
@@ -20,6 +21,7 @@
       <td><%= debit.requirements %></td>
       <td><%= debit.opening %></td>
       <td><%= debit.max_age %></td>
+      <td><%= debit.min_age %></td>
       <td><%= debit.promo %></td>
       <td><%= debit.insurance %></td>
 

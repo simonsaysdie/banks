@@ -30,6 +30,12 @@
   </div>
 
   <div class="form-group">
+    <%= label f, :min_age, class: "control-label" %>
+    <%= number_input f, :min_age, class: "form-control" %>
+    <%= error_tag f, :min_age %>
+  </div>
+
+  <div class="form-group">
     <%= label f, :promo, class: "control-label" %>
     <%= checkbox f, :promo, class: "form-control" %>
     <%= error_tag f, :promo %>

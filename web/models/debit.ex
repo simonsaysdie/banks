@@ -6,13 +6,14 @@ defmodule Dinero.Debit do
     field :requirements, :string
     field :opening, :integer
     field :max_age, :integer
+    field :min_age, :integer
     field :promo, :boolean, default: false
     field :insurance, :boolean, default: false
 
     timestamps
   end
 
-  @required_fields ~w(name requirements opening max_age promo insurance)
+  @required_fields ~w(name requirements opening max_age min_age promo insurance)
   @optional_fields ~w()
 
   @doc """
