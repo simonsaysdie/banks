@@ -1,0 +1,18 @@
+<h2>Show bank</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @bank.name %>
+  </li>
+
+  <li>
+    <strong>Website:</strong>
+    <%= @bank.website %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: bank_path(@conn, :edit, @bank) %>
+<%= link "Back", to: bank_path(@conn, :index) %>

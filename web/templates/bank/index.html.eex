@@ -1,0 +1,28 @@
+<h2>Listing banks</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Website</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for bank <- @banks do %>
+    <tr>
+      <td><%= bank.name %></td>
+      <td><%= bank.website %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: bank_path(@conn, :show, bank), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: bank_path(@conn, :edit, bank), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: bank_path(@conn, :delete, bank), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New bank", to: bank_path(@conn, :new) %>

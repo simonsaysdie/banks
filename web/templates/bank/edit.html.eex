@@ -1,0 +1,6 @@
+<h2>Edit bank</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: bank_path(@conn, :update, @bank) %>
+
+<%= link "Back", to: bank_path(@conn, :index) %>
