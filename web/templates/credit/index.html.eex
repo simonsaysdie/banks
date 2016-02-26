@@ -1,0 +1,46 @@
+<h2>Listing credits</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Requirements</th>
+      <th>Opening</th>
+      <th>Min age</th>
+      <th>Max age</th>
+      <th>Promo</th>
+      <th>Insurance</th>
+      <th>Cat</th>
+      <th>Annual</th>
+      <th>Additional cards</th>
+      <th>Min income</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for credit <- @credits do %>
+    <tr>
+      <td><%= credit.name %></td>
+      <td><%= credit.requirements %></td>
+      <td><%= credit.opening %></td>
+      <td><%= credit.min_age %></td>
+      <td><%= credit.max_age %></td>
+      <td><%= credit.promo %></td>
+      <td><%= credit.insurance %></td>
+      <td><%= credit.cat %></td>
+      <td><%= credit.annual %></td>
+      <td><%= credit.additional_cards %></td>
+      <td><%= credit.min_income %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: credit_path(@conn, :show, credit), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: credit_path(@conn, :edit, credit), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: credit_path(@conn, :delete, credit), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New credit", to: credit_path(@conn, :new) %>

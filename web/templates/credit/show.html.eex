@@ -1,0 +1,63 @@
+<h2>Show credit</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @credit.name %>
+  </li>
+
+  <li>
+    <strong>Requirements:</strong>
+    <%= @credit.requirements %>
+  </li>
+
+  <li>
+    <strong>Opening:</strong>
+    <%= @credit.opening %>
+  </li>
+
+  <li>
+    <strong>Min age:</strong>
+    <%= @credit.min_age %>
+  </li>
+
+  <li>
+    <strong>Max age:</strong>
+    <%= @credit.max_age %>
+  </li>
+
+  <li>
+    <strong>Promo:</strong>
+    <%= @credit.promo %>
+  </li>
+
+  <li>
+    <strong>Insurance:</strong>
+    <%= @credit.insurance %>
+  </li>
+
+  <li>
+    <strong>Cat:</strong>
+    <%= @credit.cat %>
+  </li>
+
+  <li>
+    <strong>Annual:</strong>
+    <%= @credit.annual %>
+  </li>
+
+  <li>
+    <strong>Additional cards:</strong>
+    <%= @credit.additional_cards %>
+  </li>
+
+  <li>
+    <strong>Min income:</strong>
+    <%= @credit.min_income %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: credit_path(@conn, :edit, @credit) %>
+<%= link "Back", to: credit_path(@conn, :index) %>

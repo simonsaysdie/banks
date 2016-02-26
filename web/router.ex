@@ -20,6 +20,7 @@ defmodule Dinero.Router do
 
     resources "/banks", BankController
     resources "/debits", DebitController
+    resources "/credits", CreditController
 
   end
 
