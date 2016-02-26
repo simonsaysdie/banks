@@ -1,0 +1,38 @@
+<h2>Show debit</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @debit.name %>
+  </li>
+
+  <li>
+    <strong>Requirements:</strong>
+    <%= @debit.requirements %>
+  </li>
+
+  <li>
+    <strong>Opening:</strong>
+    <%= @debit.opening %>
+  </li>
+
+  <li>
+    <strong>Max age:</strong>
+    <%= @debit.max_age %>
+  </li>
+
+  <li>
+    <strong>Promo:</strong>
+    <%= @debit.promo %>
+  </li>
+
+  <li>
+    <strong>Insurance:</strong>
+    <%= @debit.insurance %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: debit_path(@conn, :edit, @debit) %>
+<%= link "Back", to: debit_path(@conn, :index) %>

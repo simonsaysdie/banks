@@ -1,0 +1,36 @@
+<h2>Listing debits</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Requirements</th>
+      <th>Opening</th>
+      <th>Max age</th>
+      <th>Promo</th>
+      <th>Insurance</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for debit <- @debits do %>
+    <tr>
+      <td><%= debit.name %></td>
+      <td><%= debit.requirements %></td>
+      <td><%= debit.opening %></td>
+      <td><%= debit.max_age %></td>
+      <td><%= debit.promo %></td>
+      <td><%= debit.insurance %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: debit_path(@conn, :show, debit), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: debit_path(@conn, :edit, debit), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: debit_path(@conn, :delete, debit), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New debit", to: debit_path(@conn, :new) %>

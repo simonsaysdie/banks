@@ -19,6 +19,8 @@ defmodule Dinero.Router do
     get "/", PageController, :index
 
     resources "/banks", BankController
+    resources "/debits", DebitController
+
   end
 
   # Other scopes may use custom stacks.
