@@ -10,6 +10,11 @@ defmodule Dinero.CreditController do
     render(conn, "index.html", credits: credits)
   end
 
+  def public_index(conn, _params) do
+    credits = Repo.all(Credit)
+    render(conn, "public_index.html", credits: credits)
+  end
+
   def new(conn, _params) do
     changeset = Credit.changeset(%Credit{})
     render(conn, "new.html", changeset: changeset)

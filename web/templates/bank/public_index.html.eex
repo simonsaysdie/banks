@@ -1,6 +1,3 @@
-<h2>Listado de bancos</h2>
-
-
 <%= for bank <- @banks do %>
     <div>
       <div>

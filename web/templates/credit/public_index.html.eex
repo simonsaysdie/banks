@@ -1,0 +1,82 @@
+<%= for credit <- @credits do %>
+    <div>
+ 
+      <div>
+      	<h2 class="name"> Nombre de tarjeta </h2>
+		<h2 class="credit">	
+          <%= credit.name %>
+        </h2>
+      </div>
+
+       <div>
+       <h2 class="name"> Reqiusitos </h2>
+        <h2 class="credit">
+          <%= credit.requirements %>
+        </h2>
+      </div>
+
+      <div>
+        <h2 class="name"> Edad min </h2>
+        <h2 class="credit">
+          <%= credit.min_age %>
+        </h2>
+      </div>
+
+       <div>
+        <h2 class="name"> Edad max </h2>
+        <h2 class="credit">
+          <%= credit.max_age %>
+        </h2>
+      </div>
+
+       <div>
+       <h2 class="name"> Tiene promociones </h2>
+        <h2 class="credit">
+          <%= credit.promo %>
+        </h2>
+      </div>
+
+      <div>
+      <h2 class="name"> Asegurada </h2>
+        <h2 class="credit">
+          <%= credit.insurance %>
+        </h2>
+      </div>
+
+
+      <div>
+      <h2 class="name"> Porcentaje de cat </h2>
+        <h2 class="credit">
+          <%= credit.cat %>
+        </h2>
+      </div>
+
+       <div>
+        <h2 class="name"> Tarifa anual </h2>
+        <h2 class="credit">
+          <%= credit.annual %>
+        </h2>
+      </div>
+
+      <div>
+       <h2 class="name"> Tarjetas adicionales </h2>
+        <h2 class="credit">
+          <%= credit.additional_cards %>
+        </h2>
+      </div>
+
+      <div>
+      <h2 class="name"> Ingresos minimos </h2>
+        <h2 class="credit">
+          <%= credit.min_income %>
+        </h2>
+      </div>
+
+        <h2 
+         <h2 style="color:red;">
+           <p>....</p>
+        </h2>
+      
+    </div>
+
+<% end %>
