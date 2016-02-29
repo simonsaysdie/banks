@@ -10,6 +10,11 @@ defmodule Dinero.BankController do
     render(conn, "index.html", banks: banks)
   end
 
+  def public_index(conn, _params) do
+    banks = Repo.all(Bank)
+    render(conn, "public_index.html", banks: banks)
+  end
+
   def new(conn, _params) do
     changeset = Bank.changeset(%Bank{})
     render(conn, "new.html", changeset: changeset)

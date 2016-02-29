@@ -1,0 +1,24 @@
+<h2>Listado de bancos</h2>
+
+
+<%= for bank <- @banks do %>
+    <div>
+      <div>
+        <h2 style="color:black;">
+          <%= bank.name %>
+        </h2>
+      </div>
+
+      <div>
+         <h2 style="color:red;">
+          <%= bank.website %>
+           <p>....</p>
+        </h2>
+      </div>
+    </div>
+
+<% end %>
+
+   
+
+
