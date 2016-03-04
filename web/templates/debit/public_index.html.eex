@@ -1,0 +1,60 @@
+<%= for debit <- @debits do %>
+    <div>
+ 
+      <div>
+      	<h2 class="name"> Nombre de tarjeta </h2>
+		<h2 class="credit">	
+          <%= debit.name %>
+        </h2>
+      </div>
+
+       <div>
+       <h2 class="name"> Reqiusitos </h2>
+        <h2 class="credit">
+          <%= debit.requirements %>
+        </h2>
+      </div>
+
+      <div>
+        <h2 class="name"> monto de apertura </h2>
+        <h2 class="credit">
+          <%= debit.opening %>
+        </h2>
+      </div>
+
+      <div>
+        <h2 class="name"> Edad max </h2>
+        <h2 class="credit">
+          <%= debit.max_age %>
+        </h2>
+      </div>
+
+      <div>
+        <h2 class="name"> Edad min </h2>
+        <h2 class="credit">
+          <%= debit.min_age %>
+        </h2>
+      </div>
+ 
+       <div>
+       <h2 class="name"> Tiene promociones </h2>
+        <h2 class="credit">
+          <%= debit.promo %>
+        </h2>
+      </div>
+
+      <div>
+      <h2 class="name"> Asegurada </h2>
+        <h2 class="credit">
+          <%= debit.insurance %>
+        </h2>
+      </div>
+
+        <h2 
+         <h2 style="color:red;">
+           <p>....</p>
+        </h2>
+      
+    </div>
+
+<% end %>
