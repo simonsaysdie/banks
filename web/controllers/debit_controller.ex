@@ -10,6 +10,11 @@ defmodule Dinero.DebitController do
     render(conn, "index.html", debits: debits)
   end
 
+  def public_index(conn, _params) do
+    debits = Repo.all(Debit)
+    render(conn, "public_index.html", debits: debits)
+  end
+
   def new(conn, _params) do
     changeset = Debit.changeset(%Debit{})
     render(conn, "new.html", changeset: changeset)

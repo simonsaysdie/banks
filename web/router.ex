@@ -19,6 +19,9 @@ defmodule Dinero.Router do
     get "/", PageController, :index
     get "/bancos", BankController, :public_index
     get "/credito", CreditController, :public_index
+    get "/debito", DebitController, :public_index
+    
+
 
 
   end
