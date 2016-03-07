@@ -6,6 +6,7 @@ defmodule Dinero.Debit do
   schema "debits" do
     belongs_to :bank, Dinero.Bank
     field :name, :string
+    field :website, :string
     field :requirements, :string
     field :opening, :integer
     field :max_age, :integer
@@ -16,7 +17,7 @@ defmodule Dinero.Debit do
     timestamps
   end
 
-  @required_fields ~w(name requirements opening max_age min_age promo insurance bank_id)
+  @required_fields ~w(name requirements opening max_age min_age promo insurance bank_id website)
   @optional_fields ~w()
 
   @doc """

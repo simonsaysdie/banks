@@ -1,20 +1,59 @@
 <%= for bank <- @banks do %>
-    <div>
-      <div>
-        <h2 style="color:black;">
-          <%= bank.name %>
-        </h2>
-      </div>
+<body background="/images/money.jpg">
 
-      <div>
-         <h2 style="color:red;">
-          <%= bank.website %>
-           <p>....</p>
-        </h2>
-      </div>
-    </div>
+<div class="row">
+          <div class="col s12 m6">
+            <div class="card orange darken-3">
+              <div class="card-content white-text">
+                <span class="card-title">
+                  Banco <%= bank.name %></a>
+                </span>
+                <br>
+                
+                <%= for debit <- bank.debits do %>
+                <div class="col s6"><p>
+                debito: <%= debit.name %></p>
+                </div>
+                <% end %>
 
+                <%= for credit <- bank.credits do %>
+                <div class="col s6"><p>
+                credito: <%= credit.name %></p>
+                </div>
+                <% end %>
+
+              
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      <div>
+
+    
 <% end %>
+
+<footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">ESTA PAGINA TIENE COMO PROPOSITO INFORMAR , COMUNICAR. TODO LOS LOGOS, NOMBRES Y REFERENCIAS PERTENECEN A SUS RESPECTIVOS DUEÑOS.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
 
    
 

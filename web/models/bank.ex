@@ -1,6 +1,8 @@
 defmodule Dinero.Bank do
   use Dinero.Web, :model
 
+  alias Dinero.Repo
+
   schema "banks" do
     has_many :credits, Dinero.Credit
     has_many :debits, Dinero.Debit
@@ -22,5 +24,12 @@ defmodule Dinero.Bank do
   def changeset(model, params \\ :empty) do
     model
     |> cast(params, @required_fields, @optional_fields)
+  end
+
+  def all_with_cards do
+    query = from bank in Dinero.Bank, 
+    preload: [:credits, :debits]
+
+    Repo.all(query)
   end
 end

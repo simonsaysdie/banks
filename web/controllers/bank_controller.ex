@@ -11,7 +11,7 @@ defmodule Dinero.BankController do
   end
 
   def public_index(conn, _params) do
-    banks = Repo.all(Bank)
+    banks = Bank.all_with_cards
     render(conn, "public_index.html", banks: banks)
   end
 
