@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>website</th>
       <th>Requirements</th>
       <th>Opening</th>
       <th>Max age</th>
@@ -20,6 +21,7 @@
 <%= for debit <- @debits do %>
     <tr>
       <td><%= debit.name %></td>
+      <td><%= debit.website %></td>
       <td><%= debit.requirements %></td>
       <td><%= debit.opening %></td>
       <td><%= debit.max_age %></td>

@@ -12,6 +12,12 @@
   </div>
 
   <div class="form-group">
+    <%= label f, :website, class: "control-label" %>
+    <%= text_input f, :website, class: "form-control" %>
+    <%= error_tag f, :website %>
+  </div>
+
+  <div class="form-group">
     <%= label f, :requirements, class: "control-label" %>
     <%= textarea f, :requirements, class: "form-control" %>
     <%= error_tag f, :requirements %>

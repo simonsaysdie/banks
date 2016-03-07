@@ -15,11 +15,12 @@ defmodule Dinero.Credit do
     field :annual, :integer
     field :additional_cards, :boolean, default: false
     field :min_income, :integer
+    field :website, :string
 
     timestamps
   end
 
-  @required_fields ~w(name requirements min_age max_age promo insurance cat annual additional_cards min_income bank_id)
+  @required_fields ~w(name requirements min_age max_age promo insurance cat annual additional_cards min_income bank_id website)
   @optional_fields ~w()
 
   @doc """

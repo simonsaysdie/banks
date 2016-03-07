@@ -7,7 +7,7 @@
               <div class="card-content white-text">
                 <span class="card-title">
                   Tarjeta <%= debit.name %> de 
-                  <a href="<%= debit.bank.website %>"><%= debit.bank.name %></a>
+                  <a href="<%= debit.website %>"><%= debit.bank.name %></a>
                 </span>
                 <p>requisitos: <%= debit.requirements %></p>
                 <p>monto de apertura: <%= debit.opening %></p>

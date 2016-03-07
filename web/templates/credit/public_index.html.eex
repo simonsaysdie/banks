@@ -6,7 +6,7 @@
           <div class="card orange darken-3">
             <div class="card-content white-text">
               <span class="card-title">
-                Tarjeta <%= credit.name %> de <a href="<%= credit.bank.website %>"><%= credit.bank.name %></a> 
+                Tarjeta <%= credit.name %> de <a href="<%= credit.website %>"><%= credit.bank.name %></a> 
               </span>
               <p>requisitos: <%= credit.requirements %></p>
               <p>ingresos minimos mesuales: <%= credit.min_income %></p>

@@ -8,6 +8,11 @@
   </li>
 
   <li>
+    <strong>Website:</strong>
+    <%= @credit.website %>
+  </li>
+
+  <li>
     <strong>Requirements:</strong>
     <%= @credit.requirements %>
   </li>

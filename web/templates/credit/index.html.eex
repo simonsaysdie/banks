@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Website</th>
       <th>Requirements</th>
       <th>Min age</th>
       <th>Max age</th>
@@ -22,6 +23,7 @@
 <%= for credit <- @credits do %>
     <tr>
       <td><%= credit.name %></td>
+      <td><%= credit.website %></td>
       <td><%= credit.requirements %></td>
       <td><%= credit.min_age %></td>
       <td><%= credit.max_age %></td>
