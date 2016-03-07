@@ -11,7 +11,7 @@ defmodule Dinero.DebitController do
   end
 
   def public_index(conn, _params) do
-    debits = Repo.all(Debit)
+    debits = Debit.all_with_banks
     render(conn, "public_index.html", debits: debits)
   end
 

@@ -6,14 +6,24 @@
           <div class="card orange darken-3">
             <div class="card-content white-text">
               <span class="card-title">
-                Tarjeta <%= credit.name %> de <%# credit.bank.name %> 
+                Tarjeta <%= credit.name %> de <a href="<%= credit.bank.website %>"><%= credit.bank.name %></a> 
               </span>
-              <p><%= credit.requirements %></p>
-              <p><%= credit.min_income %></p>
-              <p><%= credit.min_age %></p>
-              <p><%= credit.max_age %></p>
-              <p><%= credit.cat %></p>
-              <p><%= credit.annual %></p>
+              <p>requisitos: <%= credit.requirements %></p>
+              <p>ingresos minimos mesuales: <%= credit.min_income %></p>
+              <div class="col s6"><p>
+                edad min:<%= credit.min_age %></p>
+                  </div>
+              <div class="col s6">
+                  <p>edad maxima: 
+                  <%= if credit.max_age == 0 do %>
+                    Ninguna
+                  <% else %>
+                    <% credit.max_age %>
+                  <% end %>
+                  </p>
+                </div>
+              <p>Costo Anual Total: <%= credit.cat %></p>
+              <p>anualidad: <%= credit.annual %></p>
 
             </div>
             <div class="card-action">

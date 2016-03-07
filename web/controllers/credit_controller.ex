@@ -11,7 +11,7 @@ defmodule Dinero.CreditController do
   end
 
   def public_index(conn, _params) do
-    credits = Repo.all(Credit)
+    credits = Credit.all_with_banks
     render(conn, "public_index.html", credits: credits)
   end
 

@@ -6,14 +6,23 @@
             <div class="card orange darken-3">
               <div class="card-content white-text">
                 <span class="card-title">
-                  Tarjeta <%= debit.name %> de <%# credit.bank.name %> 
+                  Tarjeta <%= debit.name %> de 
+                  <a href="<%= debit.bank.website %>"><%= debit.bank.name %></a>
                 </span>
-                <p><%= debit.requirements %></p>
-                <p><%= debit.opening %></p>
-                <p><%= debit.min_age %></p>
-                <p><%= debit.max_age %></p>
-                <p><%= debit.promo %></p>
-                <p><%= debit.insurance %></p>
+                <p>requisitos: <%= debit.requirements %></p>
+                <p>monto de apertura: <%= debit.opening %></p>
+                <div class="col s6"><p>
+                edad min:<%= debit.min_age %></p>
+                  </div>
+                <div class="col s6">
+                  <p>edad maxima: 
+                  <%= if debit.max_age == 0 do %>
+                    Ninguna
+                  <% else %>
+                    <% debit.max_age %>
+                  <% end %>
+                  </p>
+                </div>
 
               </div>
               <div class="card-action">
@@ -33,21 +42,19 @@
         </div>
       <div>
         
-
  <footer class="page-footer">
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
                 <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">ESTA PAGINA TIENE COMO PROPOSITO INFORMAR Y COMUNICAR. TODO LOS LOGOS, NOMBRES Y REFERENCIAS PERTENECEN A SUS RESPECTIVOS DUEÑOS.</p>
+                <p class="grey-text text-lighten-4">ESTA PAGINA TIENE COMO PROPOSITO INFORMAR , COMUNICAR. TODO LOS LOGOS, NOMBRES Y REFERENCIAS PERTENECEN A SUS RESPECTIVOS DUEÑOS.</p>
               </div>
               <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Links</h5>
                 <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                  <%= for debit <- @debits do %>
+                    <li><a class="grey-text text-lighten-3" href="<%= debit.bank.website %>"><%= debit.bank.name %></a></li>
+                  <% end %>
                 </ul>
               </div>
             </div>

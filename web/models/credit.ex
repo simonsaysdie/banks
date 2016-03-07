@@ -1,6 +1,8 @@
 defmodule Dinero.Credit do
   use Dinero.Web, :model
 
+  alias Dinero.Repo
+
   schema "credits" do
     belongs_to :bank, Dinero.Bank
     field :name, :string
@@ -29,5 +31,12 @@ defmodule Dinero.Credit do
   def changeset(model, params \\ :empty) do
     model
     |> cast(params, @required_fields, @optional_fields)
+  end
+
+  def all_with_banks do
+    query = from credit in Dinero.Credit, 
+    preload: [:bank]
+
+    Repo.all(query)  
   end
 end
