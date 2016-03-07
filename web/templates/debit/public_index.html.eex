@@ -1,60 +1,63 @@
 <%= for debit <- @debits do %>
-    <div>
- 
+<body background="/images/money.jpg">
+
+        <div class="row">
+          <div class="col s12 m6">
+            <div class="card orange darken-3">
+              <div class="card-content white-text">
+                <span class="card-title">
+                  Tarjeta <%= debit.name %> de <%# credit.bank.name %> 
+                </span>
+                <p><%= debit.requirements %></p>
+                <p><%= debit.opening %></p>
+                <p><%= debit.min_age %></p>
+                <p><%= debit.max_age %></p>
+                <p><%= debit.promo %></p>
+                <p><%= debit.insurance %></p>
+
+              </div>
+              <div class="card-action">
+                <!-- <a href="#">This is a link</a> -->
+                <%= if debit.promo do %>
+                  <i class="large material-icons">new_releases</i>
+                <% end %>
+                <%= if debit.insurance do %>
+                  <i class="large material-icons">verified_user</i>
+                <% end %>
+                <%= if debit.opening do %>
+                  <i class="large material-icons">input</i>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
       <div>
-      	<h2 class="name"> Nombre de tarjeta </h2>
-		<h2 class="credit">	
-          <%= debit.name %>
-        </h2>
-      </div>
+        
 
-       <div>
-       <h2 class="name"> Reqiusitos </h2>
-        <h2 class="credit">
-          <%= debit.requirements %>
-        </h2>
-      </div>
+ <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">ESTA PAGINA TIENE COMO PROPOSITO INFORMAR Y COMUNICAR. TODO LOS LOGOS, NOMBRES Y REFERENCIAS PERTENECEN A SUS RESPECTIVOS DUEÑOS.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
 
-      <div>
-        <h2 class="name"> monto de apertura </h2>
-        <h2 class="credit">
-          <%= debit.opening %>
-        </h2>
-      </div>
-
-      <div>
-        <h2 class="name"> Edad max </h2>
-        <h2 class="credit">
-          <%= debit.max_age %>
-        </h2>
-      </div>
-
-      <div>
-        <h2 class="name"> Edad min </h2>
-        <h2 class="credit">
-          <%= debit.min_age %>
-        </h2>
-      </div>
- 
-       <div>
-       <h2 class="name"> Tiene promociones </h2>
-        <h2 class="credit">
-          <%= debit.promo %>
-        </h2>
-      </div>
-
-      <div>
-      <h2 class="name"> Asegurada </h2>
-        <h2 class="credit">
-          <%= debit.insurance %>
-        </h2>
-      </div>
-
-        <h2 
-         <h2 style="color:red;">
-           <p>....</p>
-        </h2>
-      
-    </div>
-
-<% end %>
+        <% end %>
