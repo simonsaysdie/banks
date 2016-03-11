@@ -2,6 +2,7 @@ defmodule Dinero.DebitController do
   use Dinero.Web, :controller
 
   alias Dinero.Debit
+  alias Dinero.Bank
 
   plug :scrub_params, "debit" when action in [:create, :update]
 
@@ -17,7 +18,8 @@ defmodule Dinero.DebitController do
 
   def new(conn, _params) do
     changeset = Debit.changeset(%Debit{})
-    render(conn, "new.html", changeset: changeset)
+    banks = Bank.all_with_cards
+    render(conn, "new.html", changeset: changeset, banks: banks)
   end
 
   def create(conn, %{"debit" => debit_params}) do
@@ -41,7 +43,8 @@ defmodule Dinero.DebitController do
   def edit(conn, %{"id" => id}) do
     debit = Repo.get!(Debit, id)
     changeset = Debit.changeset(debit)
-    render(conn, "edit.html", debit: debit, changeset: changeset)
+    banks = Bank.all_with_cards
+    render(conn, "edit.html", debit: debit, changeset: changeset, banks: banks)
   end
 
   def update(conn, %{"id" => id, "debit" => debit_params}) do
