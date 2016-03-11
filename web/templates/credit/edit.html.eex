@@ -1,6 +1,6 @@
 <h2>Edit credit</h2>
 
-<%= render "form.html", changeset: @changeset,
+<%= render "form.html", changeset: @changeset, banks: @banks,
                         action: credit_path(@conn, :update, @credit) %>
 
 <%= link "Back", to: credit_path(@conn, :index) %>
