@@ -29,6 +29,8 @@
         
       </header>
 
+
+
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
 
@@ -39,5 +41,23 @@
     </div> <!-- /container -->
     <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+
   </body>
+
+  <footer class="page-footer #c62828 red darken-3">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">ESTA PAGINA TIENE COMO PROPOSITO INFORMAR Y COMUNICAR. TODO LOS LOGOS, NOMBRES Y REFERENCIAS PERTENECEN A SUS RESPECTIVOS DUEÑOS.</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
 </html>
