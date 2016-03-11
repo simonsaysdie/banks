@@ -75,6 +75,8 @@
   <div class="form-group">
     <%= label f, :bank_id, class: "control-label" %>
     <%= number_input f, :bank_id, class: "form-control" %>
+    <%= inspect @banks %>
+    <%# multiple_select f, :bank_id, @banks  %>
     <%= error_tag f, :bank_id %>
   </div>
 

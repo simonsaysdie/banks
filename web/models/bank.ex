@@ -32,4 +32,21 @@ defmodule Dinero.Bank do
 
     Repo.all(query)
   end
+
+  def map_with_id do
+    banks = Enum.map(all_with_cards, fn(bank) ->
+      %{bank.name => bank.id}
+    end)
+    
+    parsed_banks = Enum.reduce(banks, fn(bank, acc) -> 
+      cond do
+        acc != %{} ->
+          acc = %{}
+          Map.merge(acc, bank)
+        :else ->
+          Map.merge(acc, bank)
+      end
+      
+    end)
+  end
 end

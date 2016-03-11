@@ -16,11 +16,16 @@
   <body>
     <div class="container">
       <header class="header">
-        <nav role="navigation">
-          <ul class="nav nav-pills pull-right">
-            <li><a href="http://www.phoenixframework.org/docs">Get Started</a></li>
+      <nav>
+        <div class="nav-wrapper">
+          <a href="/#" class="brand-logo">Logo</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="/bancos">Bancos</a></li>
+              <li><a href="/credito">Tarjetas de Credito</a></li>
+            <li><a href="/debito">Tarjetas de Debito</a></li>
           </ul>
-        </nav>
+        </div>
+      </nav>
         
       </header>
 

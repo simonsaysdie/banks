@@ -1,36 +1,29 @@
-<div class="jumbotron">
-  <h2><%= gettext "Welcome to %{name}", name: "Phoenix!" %></h2>
-  <p class="lead">A productive web framework that<br />does not compromise speed and maintainability.</p>
-</div>
-
-<div class="row marketing">
-  <div class="col-lg-6">
-    <h4>Resources</h4>
-    <ul>
-      <li>
-        <a href="http://phoenixframework.org/docs/overview">Guides</a>
-      </li>
-      <li>
-        <a href="http://hexdocs.pm/phoenix">Docs</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix">Source</a>
-      </li>
-    </ul>
+  <div class="jumbotron">
+    <body background="/images/money.jpg">
+      <h2><%= gettext "Welcome to %{name}", name: "Phoenix!" %></h2>
+        <p class="lead">Esta pagina tiene como objetivo dar a conocer los  distintos bancos que hay en mexico de los cuales te proporcionaremos los datos de cada uno, para que tu puedas asegurar cual se ajusta a tus necesidades financieras, tambien te daremos a conocer los datos de las distintas tarjetas que te proporciona cada banco ya sea de credito y debito.</p>
   </div>
 
-  <div class="col-lg-6">
-    <h4>Help</h4>
-    <ul>
-      <li>
-        <a href="http://groups.google.com/group/phoenix-talk">Mailing list</a>
-      </li>
-      <li>
-        <a href="http://webchat.freenode.net/?channels=elixir-lang">#elixir-lang on freenode IRC</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/elixirphoenix">@elixirphoenix</a>
-      </li>
-    </ul>
+  <footer class="page-footer #c62828 red darken-3">
+      <div class="container ">
+        <div class="row">
+            <div class="col l6 s12 ">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">ESTA PAGINA TIENE COMO PROPOSITO INFORMAR , COMUNICAR. TODO LOS LOGOS, NOMBRES Y REFERENCIAS PERTENECEN A SUS RESPECTIVOS DUEÑOS.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                 <h5 class="white-text">Links</h5>    
+            </div>
+        </div>
+      </div>
+            <div class="footer-copyright">
+              <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+             </div>
+           </div>
+  </footer>
+
+       
   </div>
 </div>
