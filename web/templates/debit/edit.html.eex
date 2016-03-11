@@ -1,6 +1,6 @@
 <h2>Edit debit</h2>
 
-<%= render "form.html", changeset: @changeset,
+<%= render "form.html", changeset: @changeset, banks: @banks,
                         action: debit_path(@conn, :update, @debit) %>
 
 <%= link "Back", to: debit_path(@conn, :index) %>

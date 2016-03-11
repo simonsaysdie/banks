@@ -36,14 +36,14 @@
   </div>
 
   <div class="form-group">
-    <%= label f, :promo, class: "control-label" %>
     <%= checkbox f, :promo, class: "form-control" %>
+    <%= label f, :promo, class: "control-label" %>
     <%= error_tag f, :promo %>
   </div>
 
   <div class="form-group">
-    <%= label f, :insurance, class: "control-label" %>
     <%= checkbox f, :insurance, class: "form-control" %>
+    <%= label f, :insurance, class: "control-label" %>
     <%= error_tag f, :insurance %>
   </div>
 
@@ -60,8 +60,8 @@
   </div>
 
   <div class="form-group">
-    <%= label f, :additional_cards, class: "control-label" %>
     <%= checkbox f, :additional_cards, class: "form-control" %>
+    <%= label f, :additional_cards, class: "control-label" %>
     <%= error_tag f, :additional_cards %>
   </div>
 
@@ -74,9 +74,8 @@
 
   <div class="form-group">
     <%= label f, :bank_id, class: "control-label" %>
-    <%= number_input f, :bank_id, class: "form-control" %>
-    <%= inspect @banks %>
-    <%# multiple_select f, :bank_id, @banks  %>
+    <%# number_input f, :bank_id, class: "form-control" %>
+    <%= select f, :bank_id, parse_banks(@banks), selected: Enum.map(@banks, & &1.id), class: "form-control" %>
     <%= error_tag f, :bank_id %>
   </div>
 

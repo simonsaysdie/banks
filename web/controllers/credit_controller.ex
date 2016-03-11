@@ -1,8 +1,7 @@
 defmodule Dinero.CreditController do
   use Dinero.Web, :controller
 
-  alias Dinero.Credit
-  alias Dinero.Bank
+  alias Dinero.{Credit, Bank}
 
   plug :scrub_params, "credit" when action in [:create, :update]
 
@@ -18,7 +17,7 @@ defmodule Dinero.CreditController do
 
   def new(conn, _params) do
     changeset = Credit.changeset(%Credit{})
-    banks = Bank.map_with_id
+    banks = Bank.all_with_cards
     render(conn, "new.html", changeset: changeset, banks: banks)
   end
 
@@ -43,7 +42,7 @@ defmodule Dinero.CreditController do
   def edit(conn, %{"id" => id}) do
     credit = Repo.get!(Credit, id)
     changeset = Credit.changeset(credit)
-    banks = Bank.map_with_id
+    banks = Bank.all_with_cards
     render(conn, "edit.html", credit: credit, changeset: changeset, banks: banks)
   end
 
