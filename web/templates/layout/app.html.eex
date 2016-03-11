@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.css">
   </head>
 
-  <body>
+  <body background="/images/money.jpg">
     <div class="container">
       <header class="header">
       <nav class="#c62828 red darken-3">
