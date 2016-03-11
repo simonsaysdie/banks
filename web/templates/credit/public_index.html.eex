@@ -29,13 +29,13 @@
             <div class="card-action">
               <!-- <a href="#">This is a link</a> -->
               <%= if credit.promo do %>
-                <i class="large material-icons">new_releases</i>
+                <i title="Tiene promociones" class="large material-icons">new_releases</i>
               <% end %>
               <%= if credit.insurance do %>
-                <i class="large material-icons">verified_user</i>
+                <i title="Asegurada"class="large material-icons">verified_user</i>
               <% end %>
               <%= if credit.additional_cards do %>
-                <i class="large material-icons">credit_card</i>
+                <i title="Tiene tarjetas adicionales"class="large material-icons">credit_card</i>
               <% end %>
             </div>
           </div>

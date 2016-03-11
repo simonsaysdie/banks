@@ -28,13 +28,13 @@
               <div class="card-action">
                 <!-- <a href="#">This is a link</a> -->
                 <%= if debit.promo do %>
-                  <i class="large material-icons">new_releases</i>
+                  <i title="Tiene promociones"class="large material-icons">new_releases</i>
                 <% end %>
                 <%= if debit.insurance do %>
-                  <i class="large material-icons">verified_user</i>
+                  <i title="Asegurada"class="large material-icons">verified_user</i>
                 <% end %>
                 <%= if debit.opening do %>
-                  <i class="large material-icons">input</i>
+                  <i title="Pide monto de apertura"class="large material-icons">input</i>
                 <% end %>
               </div>
             </div>
