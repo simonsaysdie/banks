@@ -49,7 +49,7 @@
 
   <div class="form-group">
     <%= label f, :cat, class: "control-label" %>
-    <%= number_input f, :cat, class: "form-control" %>
+    <%= number_input f, :cat, class: "form-control", step: "any" %>
     <%= error_tag f, :cat %>
   </div>
 
