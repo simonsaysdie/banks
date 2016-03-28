@@ -11,7 +11,7 @@ defmodule Dinero.Credit do
     field :max_age, :integer
     field :promo, :boolean, default: false
     field :insurance, :boolean, default: false
-    field :cat, :integer
+    field :cat, :float
     field :annual, :integer
     field :additional_cards, :boolean, default: false
     field :min_income, :integer

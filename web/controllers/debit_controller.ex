@@ -51,6 +51,7 @@ defmodule Dinero.DebitController do
   def update(conn, %{"id" => id, "debit" => debit_params}) do
     debit = Repo.get!(Debit, id)
     changeset = Debit.changeset(debit, debit_params)
+    banks = Bank.all_with_cards
 
     case Repo.update(changeset) do
       {:ok, debit} ->
@@ -58,7 +59,7 @@ defmodule Dinero.DebitController do
         |> put_flash(:info, "Debit updated successfully.")
         |> redirect(to: debit_path(conn, :show, debit))
       {:error, changeset} ->
-        render(conn, "edit.html", debit: debit, changeset: changeset)
+        render(conn, "edit.html", debit: debit, changeset: changeset, banks: banks)
     end
   end
 

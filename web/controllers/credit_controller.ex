@@ -50,6 +50,7 @@ defmodule Dinero.CreditController do
   def update(conn, %{"id" => id, "credit" => credit_params}) do
     credit = Repo.get!(Credit, id)
     changeset = Credit.changeset(credit, credit_params)
+    banks = Bank.all_with_cards
 
     case Repo.update(changeset) do
       {:ok, credit} ->
@@ -57,7 +58,7 @@ defmodule Dinero.CreditController do
         |> put_flash(:info, "Credit updated successfully.")
         |> redirect(to: credit_path(conn, :show, credit))
       {:error, changeset} ->
-        render(conn, "edit.html", credit: credit, changeset: changeset)
+        render(conn, "edit.html", credit: credit, changeset: changeset, banks: banks)
     end
   end
 
