@@ -24,6 +24,7 @@ defmodule Dinero.DebitController do
 
   def create(conn, %{"debit" => debit_params}) do
     changeset = Debit.changeset(%Debit{}, debit_params)
+    banks = Bank.all_with_cards
 
     case Repo.insert(changeset) do
       {:ok, _debit} ->
@@ -31,7 +32,7 @@ defmodule Dinero.DebitController do
         |> put_flash(:info, "Debit created successfully.")
         |> redirect(to: debit_path(conn, :index))
       {:error, changeset} ->
-        render(conn, "new.html", changeset: changeset)
+        render(conn, "new.html", changeset: changeset, banks: banks)
     end
   end
 

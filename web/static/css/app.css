@@ -16,6 +16,12 @@
 	color: red;
 }
 
+.card-container-columns {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
 .sticky-footer {
   margin-top: 50vh !important;
 }

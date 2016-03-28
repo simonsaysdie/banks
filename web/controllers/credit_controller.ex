@@ -23,6 +23,7 @@ defmodule Dinero.CreditController do
 
   def create(conn, %{"credit" => credit_params}) do
     changeset = Credit.changeset(%Credit{}, credit_params)
+    banks = Bank.all_with_cards
 
     case Repo.insert(changeset) do
       {:ok, _credit} ->
@@ -30,7 +31,7 @@ defmodule Dinero.CreditController do
         |> put_flash(:info, "Credit created successfully.")
         |> redirect(to: credit_path(conn, :index))
       {:error, changeset} ->
-        render(conn, "new.html", changeset: changeset)
+        render(conn, "new.html", changeset: changeset, banks: banks)
     end
   end
 
