@@ -33,6 +33,15 @@ defmodule Dinero.Bank do
     Repo.all(query)
   end
 
+  def with_cards(id) do 
+    query = from bank in Dinero.Bank,
+    where: bank.id == ^id, 
+    preload: [:credits, :debits]
+
+    Repo.one(query) 
+    
+  end
+
   def map_with_id do
     banks = Enum.map(all_with_cards, fn(bank) ->
       %{bank.name => bank.id}
