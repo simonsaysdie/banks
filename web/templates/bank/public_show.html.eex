@@ -1,18 +1,107 @@
-<h2>Show bank</h2>
 
-<ul>
+    <a href="<%= @bank.website %>">
+    	<strong class="bank"><%= @bank.name %></strong>
+    </a>
+    
+    <h2>Crédito</h2>	
+      <div class="row">
+        
+          <%= for credit <- @bank.credits do %>
+          <div class="col s12 m6">
+          <div class="card #455a64 blue-grey darken-2">
+            <div class="card-content white-text">
+              <span class="card-title">
+                <a href="<%= credit.website %>">Tarjeta <%= credit.name %></a>
+              </span>
+              <p>requisitos: <%= credit.requirements %></p>
+              <p>ingresos minimos mesuales: <%= credit.min_income %></p>
+              <div class="col s6"><p>
+                edad min:<%= credit.min_age %></p>
+                  </div>
+              <div class="col s6">
+                  <p>edad maxima: 
+                  <%= if credit.max_age == 0 do %>
+                    Ninguna
+                  <% else %>
+                    <% credit.max_age %>
+                  <% end %>
+                  </p>
+                </div>
+              <p>Costo Anual Total: <%= credit.cat %></p>
+              <p>anualidad: <%= credit.annual %></p>
 
-  <li>
-    <strong>Name:</strong>
-    <%= @bank.name %>
-  </li>
+            </div>
+            <div class="card-action">
+              <!-- <a href="#">This is a link</a> -->
+              <%= if credit.promo do %>
+                <i title="Tiene promociones" class="large material-icons">new_releases</i>
+              <% end %>
+              <%= if credit.insurance do %>
+                <i title="Asegurada"class="large material-icons">verified_user</i>
+              <% end %>
+              <%= if credit.additional_cards do %>
+                <i title="Tiene tarjetas adicionales"class="large material-icons">credit_card</i>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      </div>
 
-  <li>
-    <strong>Website:</strong>
-    <%= @bank.website %>
-  </li>
+      <div class="row">
 
-</ul>
+     <h2>Débito</h2>
 
-<%= link "Edit", to: bank_path(@conn, :edit, @bank) %>
-<%= link "Back", to: bank_path(@conn, :index) %>
+
+      <%= for debit <- @bank.debits do %>
+
+
+       
+          <div class="col s12 m6">
+            <div class="card #455a64 blue-grey darken-2">
+              <div class="card-content white-text">
+                <span class="card-title">
+                  Tarjeta <%= debit.name %></a>
+                </span>
+                <p>requisitos: <%= debit.requirements %></p>
+                <p>monto de apertura: <%= debit.opening %></p>
+                <div class="col s6"><p>
+                edad min:<%= debit.min_age %></p>
+                  </div>
+                <div class="col s6">
+                  <p>edad maxima: 
+                  <%= if debit.max_age == 0 do %>
+                    Ninguna
+                  <% else %>
+                    <% debit.max_age %>
+                  <% end %>
+                  </p>
+                </div>
+
+              </div>
+              <div class="card-action">
+                <!-- <a href="#">This is a link</a> -->
+                <%= if debit.promo do %>
+                  <i title="Tiene promociones"class="large material-icons">new_releases</i>
+                <% end %>
+                <%= if debit.insurance do %>
+                  <i title="Asegurada"class="large material-icons">verified_user</i>
+                <% end %>
+                <%= if debit.opening do %>
+                  <i title="Pide monto de apertura"class="large material-icons">input</i>
+                <% end %>
+      </div>
+
+    </div>
+
+        
+   <% end %>
+       </div>
+      </div>
+        
+ 
+
+        
+
+    
+

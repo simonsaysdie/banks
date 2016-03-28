@@ -16,6 +16,11 @@
 	color: red;
 }
 
+.bank {
+	font-size: 20px;
+	color: black;
+}
+
 .sticky-footer {
   margin-top: 50vh !important;
 }
