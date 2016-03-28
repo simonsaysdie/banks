@@ -11,11 +11,14 @@
 	color: black;
 }
 
-.name{
+.name {
 	font-size: 20px;
 	color: red;
 }
 
+.sticky-footer {
+  margin-top: 50vh !important;
+}
 body, form, ul, table {
   margin-top: 20px;
   margin-bottom: 20px;
