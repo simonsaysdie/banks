@@ -38,6 +38,11 @@ defmodule Dinero.BankController do
     render(conn, "show.html", bank: bank)
   end
 
+  def public_show(conn, %{"id" => id}) do
+    bank = Bank.with_cards(id)
+    render(conn, "public_show.html", bank: bank)
+  end
+
   def edit(conn, %{"id" => id}) do
     bank = Repo.get!(Bank, id)
     changeset = Bank.changeset(bank)

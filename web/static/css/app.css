@@ -22,6 +22,11 @@
   flex-wrap: wrap;
 }
 
+.bank {
+	font-size: 40px;
+	color: black;
+}
+
 .sticky-footer {
   margin-top: 50vh !important;
 }

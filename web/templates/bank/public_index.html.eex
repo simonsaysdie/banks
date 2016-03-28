@@ -7,23 +7,12 @@
             <div class="card #455a64 blue-grey darken-2">
               <div class="card-content white-text">
                 <span class="card-title">
-                  Banco  <a href="<%= bank.website %>"><%= bank.name %></a>
+                  Banco  <a href="/bancos/<%= bank.id %>"><%= bank.name %></a>
                 </span>
                 <br>
                 
-                <%= for debit <- bank.debits do %>
-                <div class="col s6"><p>
-                debito: <%= debit.name %></p>
-                </div>
-                <% end %>
+               
 
-                <%= for credit <- bank.credits do %>
-                <div class="col s6"><p>
-                credito: <%= credit.name %></p>
-                </div>
-                <% end %>
-
-              
                 
               </div>
             </div>
