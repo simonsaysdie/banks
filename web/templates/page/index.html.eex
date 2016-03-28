@@ -1,6 +1,6 @@
   <div class="jumbotron">
     
-      <h2><%= gettext "Welcome to %{name}", name: "Phoenix!" %></h2>
+      <h2><%= gettext "Bienvenido a %{name}", name: "CONOCE TU BANCO" %></h2>
         <p class="lead">Esta pagina tiene como objetivo dar a conocer los  distintos bancos que hay en mexico de los cuales te proporcionaremos los datos de cada uno, para que tu puedas asegurar cual se ajusta a tus necesidades financieras, tambien te daremos a conocer los datos de las distintas tarjetas que te proporciona cada banco ya sea de credito y debito.</p>
   </div>
 
