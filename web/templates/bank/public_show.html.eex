@@ -54,14 +54,11 @@
 
 
       <%= for debit <- @bank.debits do %>
-
-
-       
           <div class="col s12 m6">
-            <div class="card #455a64 blue-grey darken-2">
-              <div class="card-content white-text">
-                <span class="card-title">
-                  Tarjeta <%= debit.name %></a>
+          <div class="card #455a64 blue-grey darken-2">
+            <div class="card-content white-text">
+              <span class="card-title">
+                  <a href="<%= debit.website %>">Tarjeta <%= debit.name %></a>
                 </span>
                 <p>requisitos: <%= debit.requirements %></p>
                 <p>monto de apertura: <%= debit.opening %></p>
@@ -80,7 +77,7 @@
 
               </div>
               <div class="card-action">
-                <!-- <a href="#">This is a link</a> -->
+                
                 <%= if debit.promo do %>
                   <i title="Tiene promociones"class="large material-icons">new_releases</i>
                 <% end %>
@@ -89,16 +86,15 @@
                 <% end %>
                 <%= if debit.opening do %>
                   <i title="Pide monto de apertura"class="large material-icons">input</i>
-                <% end %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
       </div>
 
-    </div>
-
-        
-   <% end %>
-       </div>
-      </div>
-        
+      <div class="row">
+  
  
 
         
