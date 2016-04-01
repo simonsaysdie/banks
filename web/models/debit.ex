@@ -7,7 +7,7 @@ defmodule Dinero.Debit do
     belongs_to :bank, Dinero.Bank
     field :name, :string
     field :website, :string
-    field :requirements, :string , :string, default: "Identificación oficial, comprobante de domicilio"
+    field :requirements, :string, default: "Identificación oficial, comprobante de domicilio"
     field :opening, :integer
     field :max_age, :integer, default: 0
     field :min_age, :integer, default: 18
