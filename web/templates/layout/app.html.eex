@@ -15,15 +15,23 @@
 
   <body background="/images/money.jpg">
     <div class="container">
-      <header class="header">
+      
+      <header class="header">     
       <nav class="#c62828 red darken-3">
         <div class="nav-wrapper">
           <a href="/#" class="brand-logo">Logo</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <ul class="right hide-on-med-and-down">
               <li><a href="/bancos">Bancos</a></li>
               <li><a href="/credito">Tarjetas de Credito</a></li>
             <li><a href="/debito">Tarjetas de Debito</a></li>
           </ul>
+
+          <ul id="mobile-demo" class="side-nav">
+              <li><a href="/bancos">Bancos</a></li>
+              <li><a href="/credito">Tarjetas de Credito</a></li>
+            <li><a href="/debito">Tarjetas de Debito</a></li>
+          </ul>
+
         </div>
       </nav>
         
