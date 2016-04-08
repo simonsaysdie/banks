@@ -21,7 +21,7 @@
                   <% end %>
                   </p>
                 </div>
-              <p>Costo Anual Total: <%= credit.cat %></p>
+              <p>Costo Anual Total: <%= Float.round(credit.cat, 2) %></p>
               <p>anualidad: <%= credit.annual %></p>
 
             </div>
