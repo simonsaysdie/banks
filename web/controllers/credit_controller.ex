@@ -12,7 +12,14 @@ defmodule Dinero.CreditController do
 
   def public_index(conn, _params) do
     credits = Credit.all_with_banks
-    render(conn, "public_index.html", credits: credits)
+    banks = Bank.all_with_cards
+    render(conn, "public_index.html", credits: credits, banks: banks)
+  end
+
+  def by_bank(conn, %{"credit_terms" => %{"bank_id" => bank_id}}) do
+    credits = Credit.by_bank(bank_id)
+    banks = Bank.all_with_cards
+    render(conn, "public_index.html", credits: credits, banks: banks)
   end
 
   def new(conn, _params) do

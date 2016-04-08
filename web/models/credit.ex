@@ -40,4 +40,12 @@ defmodule Dinero.Credit do
 
     Repo.all(query)  
   end
+
+  def by_bank(bank_id) do
+    query = from credit in Dinero.Credit,
+    where: credit.bank_id == ^bank_id,
+    preload: [:bank]
+
+    Repo.all(query)
+  end
 end
