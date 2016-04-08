@@ -23,6 +23,9 @@ defmodule Dinero.Router do
     get "/bancos/:id", BankController, :public_show
 
     post "/credito", CreditController, :by_bank
+    post "/debito", DebitController, :by_bank
+
+
     
 
 

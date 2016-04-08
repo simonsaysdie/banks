@@ -37,4 +37,12 @@ defmodule Dinero.Debit do
 
     Repo.all(query)  
   end
+
+  def by_bank(bank_id) do
+    query = from debit in Dinero.Debit,
+    where: debit.bank_id == ^bank_id,
+    preload: [:bank]
+
+    Repo.all(query)
+  end
 end

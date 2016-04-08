@@ -13,8 +13,16 @@ defmodule Dinero.DebitController do
 
   def public_index(conn, _params) do
     debits = Debit.all_with_banks
-    render(conn, "public_index.html", debits: debits)
+    banks = Bank.all_with_cards
+    render(conn, "public_index.html", debits: debits, banks: banks)
   end
+
+  def by_bank(conn, %{"debit_terms" => %{"bank_id" => bank_id}}) do
+    debits = Debit.by_bank(bank_id)
+    banks = Bank.all_with_cards
+    render(conn, "public_index.html", debits: debits, banks: banks)
+  end
+
 
   def new(conn, _params) do
     changeset = Debit.changeset(%Debit{})
