@@ -16,8 +16,8 @@ defmodule Dinero.CreditController do
     render(conn, "public_index.html", credits: credits, banks: banks)
   end
 
-  def by_bank(conn, %{"credit_terms" => %{"bank_id" => bank_id}}) do
-    credits = Credit.by_bank(bank_id)
+  def by_bank(conn, %{"credit_terms" => %{"bank_id" => bank_id, "min_income" => min_income}}) do
+    credits = Credit.by_bank_with_income(bank_id, min_income)
     banks = Bank.all_with_cards
     render(conn, "public_index.html", credits: credits, banks: banks)
   end

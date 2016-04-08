@@ -2,6 +2,9 @@
         <%= form_for @conn, credit_path(@conn, :by_bank),[as: :credit_terms], fn f-> %>
           <div class="form-group">
             <%= select f, :bank_id, parse_banks(@banks), selected: Enum.map(@banks, & &1.id), class: "form-control" %>
+            <label>Ingresos mínimos mensuales</label>
+            <%= number_input f, :min_income, class: "form-control" %>
+             
           </div>
           <%= submit "Filtrar" %>
         <% end %>
