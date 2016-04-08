@@ -14,31 +14,31 @@
   </head>
 
   <body background="/images/money.jpg">
-    <div class="container">
-      
+    <div class="container"> 
       <header class="header">     
+
       <nav class="#c62828 red darken-3">
-        <div class="nav-wrapper">
-          <a href="/#" class="brand-logo">Logo</a>
-            <ul class="right hide-on-med-and-down">
-              <li><a href="/bancos">Bancos</a></li>
-              <li><a href="/credito">Tarjetas de Credito</a></li>
-            <li><a href="/debito">Tarjetas de Debito</a></li>
-          </ul>
+      <div class="nav-wrapper">
+      <a href="/#" class="brand-logo">Logo</a>
+  <ul class="right hide-on-med-and-down">
+    <li><a href="/bancos">Bancos</a></li>
+    <li><a href="/credito">Tarjetas de Credito</a></li>
+    <li><a href="/debito">Tarjetas de Debito</a></li>
+  </ul>
+  <ul id="slide-out mobile-demo" class="side-nav">
+    <li><a href="/bancos">Bancos</a></li>
+    <li><a href="/credito">Tarjetas de Credito</a></li>
+    <li><a href="/debito">Tarjetas de Debito</a></li>
+  </ul>
+  <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
 
-          <ul id="mobile-demo" class="side-nav">
-              <li><a href="/bancos">Bancos</a></li>
-              <li><a href="/credito">Tarjetas de Credito</a></li>
-            <li><a href="/debito">Tarjetas de Debito</a></li>
-          </ul>
 
-        </div>
-      </nav>
+
+
+
+
         
       </header>
-
-
-
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
 
@@ -70,4 +70,6 @@
             </div>
           </div>
         </footer>
+
+    
 </html>

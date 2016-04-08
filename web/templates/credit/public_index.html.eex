@@ -1,4 +1,6 @@
       <div class="row">
+      
+
         <%= form_for @conn, credit_path(@conn, :by_bank),[as: :credit_terms], fn f-> %>
           <div class="form-group">
             <%= select f, :bank_id, parse_banks(@banks), selected: Enum.map(@banks, & &1.id), class: "form-control" %>
@@ -14,7 +16,7 @@
 
 
           <%= for credit <- @credits do %>
-          <div class="col s12 m6">
+          <div class="col s9 m6">
           <div class="card #455a64 blue-grey darken-2">
             <div class="card-content white-text">
               <span class="card-title">
@@ -38,6 +40,7 @@
               <p>anualidad: <%= credit.annual %></p>
 
             </div>
+
             <div class="card-action">
               <!-- <a href="#">This is a link</a> -->
               <%= if credit.promo do %>
